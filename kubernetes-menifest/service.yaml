@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: onlineshop-svc
+  namespace: onlineshop-ns
+  labels:
+    app: onlineshop
+
+spec:
+  selector:
+      app: onlineshop
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+  type: ClusterIP
