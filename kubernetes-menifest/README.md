@@ -148,7 +148,7 @@ kubectl get ns --show-labels
 > IMPORTANT:
 > Ensure your application actually listens on the container port you specify.
 
-Example if app runs on port 3000:
+Example if app runs on port 80:
 
 ```yaml
 apiVersion: apps/v1
@@ -177,7 +177,7 @@ spec:
           image: zeeshankanuga/onineshop:latest
 
           ports:
-            - containerPort: 3000
+            - containerPort: 80
 ```
 
 Apply:
@@ -208,7 +208,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 3000
+      targetPort: 80
 
   type: ClusterIP
 ```
@@ -323,7 +323,7 @@ spec:
   http:
     - route:
         - destination:
-            host: onlineshop-svc.onlineshop-ns.svc.cluster.local
+            host: onlineshop-svc
 
             port:
               number: 80
