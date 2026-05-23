@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: onlineshop-vs
+  namespace: onlineshop-ns
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - onlineshop-gateway
+  http:
+  - route:
+    - destination:
+        host: onlineshop-svc
+        port:
+          number: 80
