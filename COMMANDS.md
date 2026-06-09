@@ -2,7 +2,7 @@
 
 1. Cloning Repository
     ```powershell
-    git clone REPOSITORY
+    git clone https://github.com/zeeshankanuga/online-shopping-portal.git
     ```
 
 2. Installing Docker and Docker Compose
@@ -16,17 +16,20 @@
 3. Building Dockerfile
     ```powershell
     docker build -t online_store:v1 .
-    docker tag -t muhammadabdullahabrar/practice:online_store
-    docker push muhammadabdullahabrar/practice:online_store
+    docker tag -t zeeshankanuga/onineshop:latest
+    docker push zeeshankanuga/onineshop:latest
     ```
 4. Implementing Docker Compose
     ```powershell
     docker-compose up -d
     ```
-5. Using Docker Scout
-    ```powershell
-    docker scout cves online_store:v1 --format markdown >> image_report.md
+5. Set Python virtual environment
+     ```powershell
+    python3 -m venv myenv
+    source myenv/bin/activate
     ```
-6. Testing and Checking
-
+6. run python file
+     ```powershell
+    python agent.py
+    ```   
 ---
