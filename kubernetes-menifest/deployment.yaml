@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: onlineshop-deployment
+  namespace: onlineshop-ns
+  labels:
+    app: onlineshop
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: onlineshop
+
+  template:
+    metadata: 
+      labels:
+        app: onlineshop
+    spec:
+      containers:
+        - name: onlineshop-pod
+          image: zeeshankanuga/onineshop:latest
+          ports:
+          - containerPort: 80
