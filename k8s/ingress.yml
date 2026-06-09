@@ -13,7 +13,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: online-shop.iemafzalhassan.tech
+  - host: 
     http:
       paths:
       - path: /
