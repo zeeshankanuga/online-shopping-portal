@@ -127,10 +127,3 @@ git commit -m "feat: add user authentication system"
 └── vite.config.js
 ```
 
-## Community 👥
-- Join our [Discord server](https://discord.gg/aVMWfSKA)
-
-
-## License 📄
-
-By contributing, you agree that your contributions will be licensed under the same MIT License that covers the project. 
